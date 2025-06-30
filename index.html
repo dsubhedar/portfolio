@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Styles - Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header with Hamburger Menu -->
+  <header class="bg-dark text-white">
+    <div class="container py-3">
+      <div class="d-flex align-items-center">
+        <h1 class="h3 mb-0">Alex Styles</h1>
+        <button 
+          class="navbar-toggler ms-auto text-white border-0 d-md-none" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+      <div class="collapse d-md-block mt-3 mt-md-0" id="navbarMenu">
+        <nav class="nav flex-column flex-md-row justify-content-center">
+          <a class="nav-link text-white" href="#about">About</a>
+          <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+          <a class="nav-link text-white" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="main-container">
+        <h2>About Me</h2>
+        <p class="lead">Web Developer & Designer</p>
+        <p class="fs-5">
+          Hi! I'm Alex Styles, a creative front-end developer with a passion for crafting user-friendly, visually striking digital experiences. With a background in design and code, I blend form and function to build impactful web projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section with Carousel -->
+    <section id="portfolio">
+      <div class="main-container">
+        <h2 class="mb-4">Portfolio</h2>
+
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project1" class="project-thumb d-block" title="Project 1 for Coursera">Project 1</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project2" class="project-thumb d-block" title="Project 2 for Coursera">Project 2</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project3" class="project-thumb d-block" title="Project 3 for Coursera">Project 3</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project4" class="project-thumb d-block" title="Project 4 for Coursera">Project 4</a></div>
+              </div>
+            </div>
+
+            <!-- Additional slides... -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project5" class="project-thumb d-block" title="Project 5 for Coursera">Project 5</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project6" class="project-thumb d-block" title="Project 6 for Coursera">Project 6</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project7" class="project-thumb d-block" title="Project 7 for Coursera">Project 7</a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3"><a href="#project8" class="project-thumb d-block" title="Project 8 for Coursera">Project 8</a></div>
+              </div>
+            </div>
+
+            <!-- Repeat above block for projects 9–20 -->
+
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev" title="Click to see previois projects.">
+            <span class="carousel-control-prev-icon" ></span>
+            <span class="visually-hidden" >Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next" title="Click to see next projects.">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden" >Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact-title">
+      <div class="main-container">
+        <span>Contact</span>
+        </div>
+    </section>
+    <section id="contact">
+      <div class="main-container">
+        <form>
+          <div class="mb-3">
+            <input id="contactName" type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </br>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p class="mb-0">&copy; 2025 Alex Styles. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Contact Prompt Modal -->
+  <div class="modal fade" id="contactPromptModal" tabindex="-1" aria-labelledby="contactPromptLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactPromptLabel">Let's Connect!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Have a question or a project in mind? Feel free to reach out through the contact form!
+        </div>
+        <div class="modal-footer">
+         
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="goToContact()">Go to Contact</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Maybe Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Trigger Script -->
+  <script>
+    function goToContact() {
+    const contactSection = document.getElementById('contact');
+    const nameInput = document.getElementById('contactName');
+
+    // Smooth scroll to contact section
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Focus after scroll completes
+    setTimeout(() => {
+      nameInput.focus();
+    }, 600); // Adjust delay as needed for scroll duration
+  }
+    const showContactModal = () => {
+      const modal = new bootstrap.Modal(document.getElementById('contactPromptModal'));
+      modal.show();
+    };
+
+
+    setTimeout(() => {
+      showContactModal();
+      setInterval(showContactModal, 120000); // every 2 minutes
+    }, 600); // initial delay of 1 minute
+  </script>
+</body>
+</html>
